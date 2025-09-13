@@ -14,7 +14,7 @@ outputs:
 runs:
   using: composite
   steps:
-  - run: echo "${{ CONTEXT }}"
+  - run: echo "${CONTEXT}"
     if: ${{ inputs.enable-context == 'true'}}
     env:
       CONTEXT: ${{ toJSON(github) }}
